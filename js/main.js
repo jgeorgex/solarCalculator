@@ -13,4 +13,8 @@ for (i = 0; i < months.length; i++) {
   annualUseKw += x;
 } // end loop
 
+dailyUseKw = annualUseKw / 365;
+
+console.log(dailyUseKw);
+
 console.log(annualUseKw);
