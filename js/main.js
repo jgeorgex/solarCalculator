@@ -1,12 +1,12 @@
 /*jslint browser:true */
 "use strict";
 
-function addMonths() {
+function addMonths(elem) {
   var annualUseKw = 0,
     dailyUseKw = 0,
     i = 0,
     x = 0;
-  var months = document.getElementById("mpc").getElementsByTagName("input");
+  var months = document.getElementById(elem).getElementsByTagName("input");
   console.log(months);
 
   for (i = 0; i < months.length; i++) {
@@ -23,4 +23,4 @@ function addMonths() {
 
 // End of function
 
-addMonths();
+addMonths("mpc");
