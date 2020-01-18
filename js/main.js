@@ -44,8 +44,10 @@ function sunHours() {
   return hrs;
 } // end function
 
-var dailyUseKw = addMonths("mpc");
-console.log(dailyUseKw);
+function calculateSolar() {
+  var dailyUseKw = addMonths("mpc");
+  console.log(dailyUseKw);
 
-var sunHoursPerDay = sunHours();
-console.log(sunHoursPerDay);
+  var sunHoursPerDay = sunHours();
+  console.log(sunHoursPerDay);
+} //end function
