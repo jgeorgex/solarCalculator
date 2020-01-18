@@ -16,5 +16,36 @@ function addMonths(elem) {
   return dailyUseKw;
 } // End of function
 
+function sunHours() {
+  var hrs; // hours of sun
+  var theZone = document.forms.solarForm.zone.selectedIndex;
+  theZone += 1;
+  switch (theZone) {
+    case 1:
+      hrs = 6;
+      break;
+    case 2:
+      hrs = 5.5;
+    case 3:
+      hrs = 5;
+      break;
+    case 4:
+      hrs = 4.5;
+      break;
+    case 5:
+      hrs = 4.2;
+      break;
+    case 6:
+      hrs = 3.5;
+      break;
+    default:
+      hrs = 0;
+  } //end switch
+  return hrs;
+} // end function
+
 var dailyUseKw = addMonths("mpc");
 console.log(dailyUseKw);
+
+var sunHoursPerDay = sunHours();
+console.log(sunHoursPerDay);
