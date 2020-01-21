@@ -78,4 +78,33 @@ function calculateSolar() {
 
   var panelsNeeded = Math.ceil(realWattNeeds / panelOutput);
   console.log(panelsNeeded);
+
+  var feedback = "";
+  feedback +=
+    "<p>Based on your average daily use of " +
+    Math.round(dailyUseKw) +
+    " kWh, you will need to purchase " +
+    panelsNeeded +
+    " " +
+    panelName +
+    " solar panels to offset 100% of your electricity bill.</p>";
+  feedback += "<h2>Additional Details</h2>";
+  feedback +=
+    "<p>Your average daily electricity consumtion: " +
+    Math.round(dailyUseKw) +
+    " Kwh per day.</p>";
+  feedback +=
+    "<p>Average sunshine hours per day: " + sunHoursPerDay + " hours</p>";
+  feedback +=
+    "<p>Realistic watts needed per hour: " +
+    Math.round(realWattNeeds) +
+    " watts/hour.</p>";
+  feedback +=
+    "<p>The " +
+    panelName +
+    " panel you selected generates about " +
+    panelOutput +
+    " watts per hour.</p>";
+
+  document.getElementById("feedback").innerHTML = feedback;
 } //end function
