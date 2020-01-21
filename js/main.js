@@ -56,28 +56,28 @@ function calculatePanel() {
 
 function calculateSolar() {
   var dailyUseKw = addMonths("mpc");
-  console.log(dailyUseKw);
+  // console.log(dailyUseKw);
 
   var sunHoursPerDay = sunHours();
-  console.log(sunHoursPerDay);
+  // console.log(sunHoursPerDay);
 
   var minKwNeeds = dailyUseKw / sunHoursPerDay;
-  console.log(minKwNeeds);
+  // console.log(minKwNeeds);
 
   var realKwNeeds = minKwNeeds * 1.25;
-  console.log(realKwNeeds);
+  // console.log(realKwNeeds);
 
   var realWattNeeds = realKwNeeds * 1000;
-  console.log(realWattNeeds);
+  // console.log(realWattNeeds);
 
   var panelInfo = calculatePanel();
   var panelOutput = panelInfo[0];
   var panelName = panelInfo[1];
-  console.log(panelOutput);
-  console.log(panelName);
+  // console.log(panelOutput);
+  // console.log(panelName);
 
   var panelsNeeded = Math.ceil(realWattNeeds / panelOutput);
-  console.log(panelsNeeded);
+  // console.log(panelsNeeded);
 
   var feedback = "";
   feedback +=
